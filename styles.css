@@ -35,7 +35,6 @@
 }
 
 .image-section {
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -72,7 +71,6 @@ span,
 }
 
 .social {
-  display: flex;
   height: 200px;
   align-items: flex-end;
   margin-left: auto;
@@ -124,6 +122,7 @@ i {
 }
 
 .title-info,
+.sub-title-text,
 .sub-title-info {
   font-size: 14px;
 }
@@ -137,9 +136,13 @@ hr {
   margin: 4rem;
 }
 
-.expertise-content {
-  display: flex;
+.expertise-content,
+.skill-content,
+.skill {
   flex-wrap: wrap;
+}
+
+.expertise-content {
   margin-bottom: 2rem;
 }
 
@@ -147,21 +150,11 @@ hr {
   margin-left: 0px;
 }
 
-.text-title,
-.title-info,
-.lastName,
-.expertise-title,
-.expertise-description,
-.number-expertise,
-.skill-title,
-.skill-percent {
+.bold {
   font-weight: bold;
 }
 
-.lastName,
-.text-title,
-.expertise-title,
-.skill-title{
+.uppercase {
   text-transform: uppercase;
 }
 
@@ -181,15 +174,6 @@ hr {
   margin-bottom: 10px;
 }
 
-.sub-title-text {
-  font-size: 14px;
-}
-
-.intro-text {
-  display: flex;
-  margin: 4rem;
-}
-
 p {
   margin-block-start: 0em;
 }
@@ -198,8 +182,8 @@ p {
 .number-expertise,
 .text-title,
 .lastName,
-.close, 
-.skill-percent{
+.close,
+.skill-percent {
   color: rgb(115, 0, 161);
 }
 
@@ -224,10 +208,9 @@ p {
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 7, 26, 0.315);
 }
 
 .modal-content {
@@ -241,7 +224,6 @@ p {
   float: right;
   margin-right: 10px;
   font-size: 28px;
-  font-weight: bold;
 }
 
 .close:hover,
@@ -259,20 +241,15 @@ p {
   text-transform: uppercase;
   width: 50%;
   margin-bottom: 2rem;
-  font-weight: bold;
 }
 
 .skill-content {
-  display: flex;
   padding-left: 20%;
-  flex-wrap: wrap;
 }
 
 .skill {
   margin: auto;
   height: inherit;
-  display: flex;
-  flex-wrap: wrap;
   align-content: center;
   justify-content: center;
 }
@@ -282,11 +259,11 @@ progress {
   width: 70%;
 }
 
-.skill-percent{
+.skill-percent {
   margin-right: 20px;
 }
 
-.skill-data{
+.skill-data {
   margin-bottom: 10px;
 }
 
@@ -306,5 +283,5 @@ progress[value]::-webkit-progress-value {
 
 progress[value]::-webkit-progress-bar,
 progress[value]::-webkit-progress-value {
- border-radius: 20px;
+  border-radius: 20px;
 }
