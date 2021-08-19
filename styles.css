@@ -20,6 +20,8 @@
 
 .col {
   display: grid;
+  align-self: start;
+  align-content: space-evenly;
 }
 
 .content-row-1 {
@@ -150,18 +152,23 @@ hr {
 .lastName,
 .expertise-title,
 .expertise-description,
-.number-expertise {
+.number-expertise,
+.skill-title,
+.skill-percent {
   font-weight: bold;
 }
 
 .lastName,
 .text-title,
-.expertise-title {
+.expertise-title,
+.skill-title{
   text-transform: uppercase;
 }
 
 .title-info,
-.expertise-title {
+.expertise-title,
+.skill-title,
+.skill-btn {
   color: rgb(59, 59, 59);
 }
 
@@ -190,7 +197,9 @@ p {
 .skill-btn:hover,
 .number-expertise,
 .text-title,
-.lastName {
+.lastName,
+.close, 
+.skill-percent{
   color: rgb(115, 0, 161);
 }
 
@@ -205,14 +214,14 @@ p {
 
 .expertise {
   margin-bottom: 2rem;
-  margin-right: 10px;
-  width: 48.5%;
+  margin: 0px 2% 2rem;
+  width: 46%;
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -229,8 +238,8 @@ p {
 }
 
 .close {
-  color: #aaa;
   float: right;
+  margin-right: 10px;
   font-size: 28px;
   font-weight: bold;
 }
@@ -255,5 +264,47 @@ p {
 
 .skill-content {
   display: flex;
+  padding-left: 20%;
   flex-wrap: wrap;
+}
+
+.skill {
+  margin: auto;
+  height: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.skill-data,
+progress {
+  width: 70%;
+}
+
+.skill-percent{
+  margin-right: 20px;
+}
+
+.skill-data{
+  margin-bottom: 10px;
+}
+
+progress {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 8px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: rgb(235, 235, 235);
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: rgb(115, 0, 161);
+}
+
+progress[value]::-webkit-progress-bar,
+progress[value]::-webkit-progress-value {
+ border-radius: 20px;
 }
